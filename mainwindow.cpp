@@ -56,7 +56,7 @@ void MainWindow::openFile()
                 fullContent += line;
                 line.remove("\n");
 
-                QRegExp regexp("^0x.{1,8}");
+                QRegExp regexp("0x[A-Za-z0-9]{7,8}");
                 regexp.indexIn(line);
                 line = regexp.cap(0).trimmed();
 
